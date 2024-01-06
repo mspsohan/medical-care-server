@@ -17,10 +17,13 @@ app.use(morgan('dev'))
 
 // All Routes
 const userRoutes = require('./src/routes/userRoutes');
+const appointmentRoutes = require('./src/routes/appointmentRoutes');
+const doctorRoutes = require('./src/routes/doctorRoutes');
 
 // Use All Routes
 app.use('/', userRoutes);
-
+app.use('/', appointmentRoutes);
+app.use('/', doctorRoutes);
 
 // Check the Server up or Down
 app.get('/', (req, res) => {
